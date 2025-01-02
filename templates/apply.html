@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Your Application History</h1>
+    <ul>
+        {% for app in applications %}
+        <li>{{ app.applicant_name }} - {{ app.plan_name }} - ₹{{ app.price }} - Email: {{ app.applicant_email }}</li>
+        {% endfor %}
+    </ul>
+    <button onclick="location.href='/'">Back to Dashboard</button>
+</body>
+</html>
+

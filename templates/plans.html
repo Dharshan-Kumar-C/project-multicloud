@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Plans</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Available Insurance Plans</h1>
+    <ul>
+        {% for plan in insurance_plans %}
+        <li>{{ plan.name }} - ₹{{ plan.price }}</li>
+        {% endfor %}
+    </ul>
+    <button onclick="location.href='/'">Back to Dashboard</button>
+</body>
+</html>
+
